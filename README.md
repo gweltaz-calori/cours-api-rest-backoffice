@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# A Lire
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Faites un CTRL+SHIFT+F pour recherche dans tout le projet avec comme query "\_id", bien cocher la recherche match whole word and match case
 
-## Recommended IDE Setup
+![https://i.imgur.com/afA6n6n.png](https://i.imgur.com/afA6n6n.png)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Vous utiliser Mongoose ?
+
+Vous n'avez rien à faire de plus
+
+## Vous utiliser Sequelize ?
+
+Remplacer "\_id" par "id" à la place

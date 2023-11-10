@@ -27,7 +27,7 @@ function logout() {
         Plats
       </RouterLink>
       <RouterLink class="nav-item" :to="`/dashboard/orders`">
-        Plats
+        Commandes
       </RouterLink>
       <div class="logout-button" @click="logout">Se Déconnecter</div>
     </nav>
