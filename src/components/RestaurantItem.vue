@@ -8,7 +8,7 @@ const props = defineProps({
 });
 
 async function deleteRestaurant() {
-  await ApiService.deleteRestaurant?.(props.restaurantAccount?._id);
+  await ApiService.deleteRestaurantUser?.(props.restaurantAccount?._id);
   props.onDeleted?.();
 }
 </script>

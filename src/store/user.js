@@ -31,7 +31,7 @@ export const useUserStore = defineStore("user", {
       this.user = user;
     },
     async loadUser() {
-      if (this.accessToken) {
+      if (this.accessToken && !this.user._id) {
         const user = await ApiService.getLoggedUser();
 
         this.user = user;

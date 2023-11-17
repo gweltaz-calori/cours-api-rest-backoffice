@@ -62,6 +62,10 @@ class ApiService {
     return newPlate;
   }
 
+  async deleteRestaurantUser(restaurantId) {
+    return "deleted " + restaurantId;
+  }
+
   async getRestaurantPlates() {
     return [
       {
