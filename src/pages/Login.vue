@@ -36,9 +36,6 @@ async function loginUserAction() {
       <button type="button" class="button" @click="loginUserAction">
         Se connecter
       </button>
-      <RouterLink class="register-button" to="/register"
-        >Se créer un compte</RouterLink
-      >
     </form>
   </div>
 </template>

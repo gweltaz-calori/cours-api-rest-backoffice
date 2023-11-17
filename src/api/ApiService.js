@@ -2,11 +2,8 @@ import AxiosInstance from "./AxiosInstance";
 
 class ApiService {
   async getLoggedUser() {
-    return {
-      email: "bob@gmail.com",
-      name: "Bob",
-      role: "RESTAURANT", //RESTAURANT
-    };
+    const { data } = await AxiosInstance.get(`/users/@me`);
+    return data;
   }
 
   async getRestaurantAccounts() {

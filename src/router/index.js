@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "../pages/Login.vue";
-import Register from "../pages/Register.vue";
 import AppDashboard from "../pages/AppDashboard.vue";
 import AppDashboardRestaurants from "../pages/AppDashboardRestaurants.vue";
 import AppDashboardCreateRestaurant from "../pages/AppDashboardCreateRestaurant.vue";
@@ -54,7 +53,6 @@ const routes = [
     redirect: "/dashboard",
   },
   { path: "/login", component: Login, beforeEnter: requireAnonymous },
-  { path: "/register", component: Register, beforeEnter: requireAnonymous },
   {
     path: "/dashboard",
     component: AppDashboard,
