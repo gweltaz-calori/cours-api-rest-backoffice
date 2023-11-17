@@ -33,22 +33,26 @@ function requireAnonymous(to, from, next) {
 async function requireRestaurantRole(to, from, next) {
   const userStore = useUserStore();
   await userStore.loadUser();
+
   if (userStore?.user?.role == "RESTAURANT") {
     next();
   } else if (userStore?.user?.role == "ADMIN") {
     next({ path: "/dashboard/restaurants" });
   } else {
+    userStore.logout();
     next({ path: "/" });
   }
 }
 async function requireAdminRole(to, from, next) {
   const userStore = useUserStore();
   await userStore.loadUser();
+  console.log(userStore?.user?.role);
   if (userStore?.user?.role == "ADMIN") {
     next();
   } else if (userStore?.user?.role == "RESTAURANT") {
     next({ path: "/dashboard/my-restaurant" });
   } else {
+    userStore.logout();
     next({ path: "/" });
   }
 }
