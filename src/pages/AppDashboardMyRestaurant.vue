@@ -14,7 +14,13 @@ async function updateRestaurantUser() {
   await ApiService.updateRestaurantUser(restaurantAccount.value);
 }
 
-onMounted(() => {});
+async function loadRestaurant() {
+  restaurantAccount.value = await ApiService.getLoggedUser();
+}
+
+onMounted(() => {
+  loadRestaurant();
+});
 </script>
 
 <template>
