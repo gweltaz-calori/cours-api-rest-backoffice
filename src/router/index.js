@@ -30,16 +30,18 @@ function requireAnonymous(to, from, next) {
   }
 }
 
-function requireRestaurantRole(to, from, next) {
+async function requireRestaurantRole(to, from, next) {
   const userStore = useUserStore();
+  await userStore.loadUser();
   if (userStore.user.role == "RESTAURANT") {
     next();
   } else {
     next({ path: "/dashboard/restaurants" });
   }
 }
-function requireAdminRole(to, from, next) {
+async function requireAdminRole(to, from, next) {
   const userStore = useUserStore();
+  await userStore.loadUser();
   if (userStore.user.role == "ADMIN") {
     next();
   } else {
